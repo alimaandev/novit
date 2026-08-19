@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; img-src 'self' data:; script-src 'self'">
+  <title>Novit - Scratchpad</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header id="titlebar">
+    <div class="titlebar-drag">
+      <span id="app-title">Novit</span>
+      <span id="hotkey-hint"><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd></span>
+    </div>
+    <div class="titlebar-controls">
+      <button id="btn-theme" class="control" title="Theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
+      </button>
+      <button id="btn-pin" class="control" title="Always on top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" stroke-linejoin="miter"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1z"/></svg>
+      </button>
+      <button id="btn-minimize" class="control" title="Minimize">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <button id="btn-maximize" class="control" title="Maximize">
+        <svg class="icon-maximize" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><rect x="5" y="5" width="14" height="14"/></svg>
+        <svg class="icon-restore" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><rect x="4" y="8" width="12" height="12"/><path d="M8 8V4h12v12h-4"/></svg>
+      </button>
+      <button id="btn-hide" class="control" title="Hide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="layout">
+    <aside id="sidebar">
+      <input id="note-search" type="text" placeholder="search notes..." spellcheck="false">
+      <ul id="note-list"></ul>
+      <button id="btn-new-note" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        New note
+      </button>
+    </aside>
+
+    <main id="workspace">
+      <input id="note-title" type="text" placeholder="Untitled" spellcheck="false">
+
+      <nav id="tabs">
+        <div class="segmented">
+          <button id="tab-edit" class="tab active" type="button">Edit</button>
+          <button id="tab-preview" class="tab" type="button">Preview</button>
+        </div>
+      </nav>
+
+      <div id="toolbar">
+        <button id="btn-bold" class="fmt" title="Bold"><b>B</b></button>
+        <button id="btn-italic" class="fmt" title="Italic"><i>I</i></button>
+        <button id="btn-strike" class="fmt" title="Strikethrough"><s>S</s></button>
+        <span class="fmt-sep"></span>
+        <button id="btn-h1" class="fmt" title="Heading 1">H1</button>
+        <button id="btn-h2" class="fmt" title="Heading 2">H2</button>
+        <button id="btn-h3" class="fmt" title="Heading 3">H3</button>
+        <span class="fmt-sep"></span>
+        <button id="btn-ul" class="fmt" title="Bullet list">&#8226; L</button>
+        <button id="btn-ol" class="fmt" title="Numbered list">1. L</button>
+        <button id="btn-quote" class="fmt" title="Quote">&rsaquo;</button>
+        <button id="btn-code" class="fmt" title="Inline code">&lt;/&gt;</button>
+        <button id="btn-link" class="fmt" title="Link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </button>
+        <span class="fmt-sep"></span>
+        <select id="btn-size" class="fmt-select" title="Text size">
+          <option value="">Size</option>
+          <option value="2">Small</option>
+          <option value="3">Normal</option>
+          <option value="5">Large</option>
+          <option value="7">Huge</option>
+        </select>
+        <input type="color" id="btn-color" value="#eb7d00" title="Text color">
+      </div>
+
+      <div id="content">
+        <div
+          id="editor"
+          contenteditable="true"
+          spellcheck="false"
+          data-placeholder="Start typing..."
+          autofocus
+        ></div>
+        <article id="preview" class="hidden" aria-live="polite"></article>
+      </div>
+
+      <footer id="statusbar">
+        <span id="save-status" class="saved"><span class="status-dot"></span>Saved</span>
+        <span id="stats">0 notes · 0 words</span>
+      </footer>
+    </main>
+  </div>
+
+  <div id="palette" class="hidden">
+    <div class="palette-box">
+      <input id="palette-input" type="text" placeholder="Search notes and commands..." spellcheck="false">
+      <ul id="palette-results"></ul>
+    </div>
+  </div>
+
+  <script type="module" src="/src/renderer.js"></script>
+</body>
+</html>
