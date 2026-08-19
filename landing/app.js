@@ -30,3 +30,13 @@ window.addEventListener('scroll', onScroll, { passive: true })
 window.addEventListener('resize', onScroll)
 window.addEventListener('load', checkReveals)
 checkReveals()
+
+fetch('/api/count')
+  .then((r) => r.json())
+  .then((data) => {
+    if (data && typeof data.count === 'number') {
+      const el = document.getElementById('dl-count')
+      el.textContent = `${data.count.toLocaleString()} downloads`
+    }
+  })
+  .catch(() => {})
