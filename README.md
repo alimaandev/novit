@@ -7,7 +7,7 @@
 > `Ctrl+Shift+N` → write → `Esc` → done.
 > Every keystroke autosaved to a plain `.md` file. That's it.
 
-🌐 **Website:** [novit-seven.vercel.app](https://novit-seven.vercel.app)
+🌐 **Website:** [novit-site.vercel.app](https://novit-site.vercel.app)
 
 [![Electron](https://img.shields.io/badge/Electron%2039-2C5745?style=for-the-badge&logo=electron&logoColor=EBE3A7)](https://www.electronjs.org)
 [![electron-vite](https://img.shields.io/badge/electron--vite%205-EB7D00?style=for-the-badge&logo=vite&logoColor=2E2910)](https://electron-vite.org)
