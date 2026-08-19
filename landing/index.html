@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novit — A floating Markdown scratchpad</title>
+    <meta
+      name="description"
+      content="Novit is a floating, always-on-top Markdown scratchpad. Summon it with a hotkey, write, and close — every keystroke is autosaved to a plain .md file."
+    />
+    <meta property="og:title" content="Novit — A floating Markdown scratchpad" />
+    <meta
+      property="og:description"
+      content="Quick notes that float above everything. Autosaved as plain Markdown files."
+    />
+    <meta property="og:image" content="/assets/app-preview.png" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="brand" href="#top">
+          <img class="brand-mark" src="/assets/logo.png" alt="Novit" />
+          <span class="brand-name">Novit</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#themes">Themes</a>
+          <a href="#shortcuts">Shortcuts</a>
+          <a class="nav-gh" href="https://github.com/alimaandev/novit" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.15c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.35.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .3.21.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+          </a>
+        </nav>
+        <a class="btn btn-primary nav-cta" href="https://github.com/alimaandev/novit/releases/download/v1.0.0/novit-1.0.0-setup.exe">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+          Download
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="hero-badge"><span class="badge-dot"></span> Floating · Always-on-top · Autosaved</p>
+            <h1>Notes that float<br /><span class="accent">above everything.</span></h1>
+            <p class="hero-sub">
+              Novit is a tiny scratchpad window that stays on top of your work.
+              Hit the hotkey, jot it down, close it — every keystroke is saved
+              to a plain <code>.md</code> file on your disk.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary btn-lg" href="https://github.com/alimaandev/novit/releases/download/v1.0.0/novit-1.0.0-setup.exe">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+                Download for Windows
+              </a>
+              <a class="btn btn-ghost btn-lg" href="https://github.com/alimaandev/novit" target="_blank" rel="noopener">View source</a>
+            </div>
+            <p class="hero-meta">Windows installer · 94 MB · v1.0.0 · <a href="https://github.com/alimaandev/novit/releases" target="_blank" rel="noopener">other platforms</a></p>
+          </div>
+
+          <div class="hero-shot">
+            <div class="window-frame">
+              <div class="window-bar">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="window-title">Novit</span>
+                <span class="window-tags">✍️ edit · 👀 preview</span>
+              </div>
+              <img src="/assets/app-preview.png" alt="Novit preview tab showing a rendered note with a task list" />
+            </div>
+            <div class="shot-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-head">
+          <p class="section-kicker">Features</p>
+          <h2>Everything a scratchpad should be.<br />Nothing it shouldn't.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="card">
+            <div class="card-icon">🪟</div>
+            <h3>Floating window</h3>
+            <p>Frameless and always-on-top. Pin it, move it, or let it hover over your editor while you work.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⌨️</div>
+            <h3>Global hotkey</h3>
+            <p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> summons Novit from anywhere — no alt-tabbing through windows.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">✍️</div>
+            <h3>WYSIWYG editor</h3>
+            <p>A formatting toolbar over a live preview. Markdown stays readable underneath, always.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💾</div>
+            <h3>Autosave</h3>
+            <p>Debounced saving to real <code>.md</code> files. Your notes are plain text you own — back them up, sync them, edit them anywhere.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧭</div>
+            <h3>Command palette</h3>
+            <p><kbd>Ctrl</kbd>+<kbd>K</kbd> to switch notes and run actions without ever touching the mouse.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🖥️</div>
+            <h3>System tray</h3>
+            <p>Show, hide, create a note, or quit — all from the tray. Novit stays out of your way until you need it.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="themes" class="section">
+        <div class="section-head">
+          <p class="section-kicker">Themes</p>
+          <h2>Four moods, one palette of pixel warmth.</h2>
+          <p class="section-sub">Switch with one click from the titlebar. Your choice sticks between restarts.</p>
+        </div>
+        <div class="theme-grid">
+          <article class="theme-card" style="--t-bg: #2e2910; --t-green: #2c5745; --t-cream: #ebe3a7; --t-orange: #eb7d00;">
+            <div class="theme-swatches"><span></span><span></span><span></span></div>
+            <h3>Olive</h3>
+            <p>Warm parchment &amp; forest tones. The default.</p>
+          </article>
+          <article class="theme-card" style="--t-bg: #171226; --t-green: #4a3f73; --t-cream: #e9defc; --t-orange: #b388ff;">
+            <div class="theme-swatches"><span></span><span></span><span></span></div>
+            <h3>Purple</h3>
+            <p>Deep violet with a lavender glow.</p>
+          </article>
+          <article class="theme-card" style="--t-bg: #0d1a1f; --t-green: #14505f; --t-cream: #d7f5f2; --t-orange: #29c7dc;">
+            <div class="theme-swatches"><span></span><span></span><span></span></div>
+            <h3>Cyan</h3>
+            <p>Night-sea tones with an electric accent.</p>
+          </article>
+          <article class="theme-card" style="--t-bg: #1e0d11; --t-green: #5b2430; --t-cream: #ffdcdc; --t-orange: #ff6b81;">
+            <div class="theme-swatches"><span></span><span></span><span></span></div>
+            <h3>Crimson</h3>
+            <p>Dark wine with a rosy highlight.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="shortcuts" class="section">
+        <div class="section-head">
+          <p class="section-kicker">Shortcuts</p>
+          <h2>Never leave the keyboard.</h2>
+        </div>
+        <div class="shortcut-list">
+          <div class="shortcut"><span class="shortcut-name">Show / hide window</span><span class="shortcut-keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>N</kbd><span class="shortcut-global">global</span></span></div>
+          <div class="shortcut"><span class="shortcut-name">New note</span><span class="shortcut-keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>N</kbd></span></div>
+          <div class="shortcut"><span class="shortcut-name">Command palette</span><span class="shortcut-keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>K</kbd></span></div>
+          <div class="shortcut"><span class="shortcut-name">Close palette</span><span class="shortcut-keys"><kbd>Esc</kbd></span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img class="brand-mark" src="/assets/logo.png" alt="Novit" />
+          <span class="brand-name">Novit</span>
+        </div>
+        <p class="footer-tag">A floating Markdown scratchpad. Notes are just <code>.md</code> files.</p>
+        <div class="footer-links">
+          <a href="https://github.com/alimaandev/novit" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/alimaandev/novit/releases" target="_blank" rel="noopener">Releases</a>
+          <a href="https://github.com/alimaandev/novit/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>
+        </div>
+        <p class="footer-copy">© 2026 Ali Sher · Built with Electron &amp; electron-vite</p>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
